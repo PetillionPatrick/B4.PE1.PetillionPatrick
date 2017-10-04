@@ -29,18 +29,19 @@ namespace PE1
 
         private async  void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            var imgSender = (Image)sender;
-            
-            imgSender.Aspect = Aspect.AspectFit;
+            var imgSender = ((Image)sender).Source;
+            var img = new Image();
+            img.Source = imgSender;
+            img.Aspect = Aspect.AspectFit;
             var temp = new ContentPage
             {
-                Content = imgSender
+                Content = img
             };
             NavigationPage.SetHasNavigationBar(temp, false);
             await Navigation.PushAsync(temp);
             //var temPage = new NavigationPage();
             //Grid add = new Grid();
-
+            
             //add.Children.Add(imgSender);
             
             //await Navigation.PushAsync(temPage);
