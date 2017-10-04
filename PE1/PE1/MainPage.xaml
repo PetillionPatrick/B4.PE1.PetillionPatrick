@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PE1"
+             x:Class="PE1.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    Android="30"
+                    WinPhone="30" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="Home.png" Grid.Row="0" HorizontalOptions="EndAndExpand" Aspect="AspectFill">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <StackLayout HorizontalOptions="FillAndExpand" Grid.Row="1">
+            <Button x:Name="btnPictureGallery" Text="Picture Gallery" Clicked="btnPictureGallery_Clicked"></Button>
+            <Button x:Name="btnWikiPage" Text="Wiki Page" Clicked="btnWikiPage_Clicked"></Button>
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
