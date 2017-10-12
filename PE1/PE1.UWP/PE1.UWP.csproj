@@ -119,6 +119,7 @@
     <Content Include="images\img7.jpg" />
     <Content Include="images\img8.png" />
     <Content Include="images\img9.png" />
+    <AndroidResource Include="images\xamarinlogo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />

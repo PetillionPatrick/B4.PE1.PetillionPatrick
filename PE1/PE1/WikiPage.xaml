@@ -7,9 +7,84 @@
                     Android="30"
                     WinPhone="30" />
     </ContentPage.Padding>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" HorizontalOptions="EndAndExpand" Aspect="AspectFill">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">Home.png</On>
+                            <On Platform="Windows">images/Home.png</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <StackLayout HorizontalOptions="FillAndExpand" Grid.Row="1">
+                    <Label Style="{DynamicResource TitleStyle}" Text="Xamarin"></Label>
+                    <BoxView HeightRequest="1"  BackgroundColor="Black"/>
+                    <Label Style="{DynamicResource CaptionStyle}" Text="From Wikipedia, the free encyclopedia"></Label>
+                    <BoxView HeightRequest="1"  BackgroundColor="Black"/>
+                    <Label>
+                        Xamarin is a Microsoft-owned San Francisco, California-based software company founded in May 2011[3] by the engineers that created Mono,[4] Mono for Android and MonoTouch, which are cross-platform implementations of the Common Language Infrastructure (CLI) and Common Language Specifications (often called Microsoft .NET).
+                        
+                    </Label>
+                    <BoxView HeightRequest="1"  BackgroundColor="Black"/>
+                    <Grid BackgroundColor="Black" RowSpacing="1" Padding="1" ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" BackgroundColor="LightGray" Grid.RowSpan="2" Grid.ColumnSpan="2"></Label>
+                        <Image HorizontalOptions="CenterAndExpand" Aspect="AspectFit" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="LightGray">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android">xamarinlogo.png</On>
+                                    <On Platform="Windows">images/xamarinlogo.png</On>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+
+                        <Label Grid.Row="2" Grid.Column="0" BackgroundColor="LightGray">Type</Label>
+                        <Label Grid.Row="2" Grid.Column="1" BackgroundColor="LightGray">Subsidiary of Microsoft</Label>
+                        <Label Grid.Row="3" Grid.Column="0" BackgroundColor="LightGray">Industry</Label>
+                        <Label Grid.Row="3" Grid.Column="1" BackgroundColor="LightGray">Software industry</Label>
+                        <Label Grid.Row="4" Grid.Column="0" BackgroundColor="LightGray">Fate</Label>
+                        <Label Grid.Row="4" Grid.Column="1" BackgroundColor="LightGray">Acquired by Microsoft (February 24,2016)</Label>
+                        <Label Grid.Row="5" Grid.Column="0" BackgroundColor="LightGray">Founded</Label>
+                        <Label Grid.Row="5" Grid.Column="1" BackgroundColor="LightGray">May 16,2011;6 years ago</Label>
+                        <Label Grid.Row="6" Grid.Column="0" BackgroundColor="LightGray">Headquarters</Label>
+                        <Label Grid.Row="6" Grid.Column="1" BackgroundColor="LightGray">San Fransisco, California</Label>
+                        <Label Grid.Row="7" Grid.Column="0" BackgroundColor="LightGray">Key people</Label>
+                        <Label Grid.Row="7" Grid.Column="1" BackgroundColor="LightGray">Miguel de Icaza, Nat Friedman</Label>
+                        <Label Grid.Row="8" Grid.Column="0" BackgroundColor="LightGray">Website</Label>
+                        <Label Grid.Row="8" Grid.Column="1" BackgroundColor="LightGray">www.xamarin.com</Label>
+                    </Grid>
+                    <BoxView HeightRequest="1"  BackgroundColor="Black"/>
+                    <Label>
+                        With a C#-shared codebase, developers can use Xamarin tools to write native Android, iOS, and Windows apps with native user interfaces and share code across multiple platforms, including Windows and macOS.[5] According to Xamarin, over 1.4 million developers were using Xamarin's products in 120 countries around the world as of April 2017.[6]
+
+On February 24, 2016, Microsoft announced it had signed a definitive agreement to acquire Xamarin.[7]
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

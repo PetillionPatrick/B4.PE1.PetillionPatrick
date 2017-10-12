@@ -2233,8 +2233,11 @@ namespace PE1.Droid
 			// aapt resource value: 0x7f0200ab
 			public const int mr_ic_play_light = 2130837675;
 			
+			// aapt resource value: 0x7f0200ad
+			public const int notification_template_icon_bg = 2130837677;
+			
 			// aapt resource value: 0x7f0200ac
-			public const int notification_template_icon_bg = 2130837676;
+			public const int xamarinlogo = 2130837676;
 			
 			static Drawable()
 			{
