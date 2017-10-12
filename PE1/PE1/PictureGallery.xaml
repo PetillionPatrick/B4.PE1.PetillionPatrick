@@ -20,8 +20,14 @@
                     <Button x:Name="btnHome" Image="Home.png" HeightRequest="40" HorizontalOptions="EndAndExpand"  Clicked="btnHome_Clicked"></Button>
                 </StackLayout>-->
             <!--<StackLayout  Grid.Row="0">-->
-                <Image Source="Home.png" Grid.Row="0" HorizontalOptions="EndAndExpand" Aspect="AspectFill">
-                    <Image.GestureRecognizers>
+                <Image Grid.Row="0" HorizontalOptions="EndAndExpand" Aspect="AspectFill">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="Android">Home.png</On>
+                        <On Platform="Windows">images/Home.png</On>
+                    </OnPlatform>
+                </Image.Source>
+                <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
                     </Image.GestureRecognizers>
                 </Image>
@@ -38,53 +44,113 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Image Source="img1.png" Grid.Column="0" Grid.Row="0">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="0" Grid.Row="0">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img1.png</On>
+                            <On Platform="Windows">images/img1.png</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img2.jpg" Grid.Column="0" Grid.Row="1">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="0" Grid.Row="1">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img2.jpg</On>
+                            <On Platform="Windows">images/img2.jpg</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img3.png" Grid.Column="0" Grid.Row="2">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="0" Grid.Row="2">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img3.png</On>
+                            <On Platform="Windows">images/img3.png</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img4.png" Grid.Column="0" Grid.Row="3">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="0" Grid.Row="3">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img4.png</On>
+                            <On Platform="Windows">images/img4.png</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img5.jpg" Grid.Column="0" Grid.Row="4">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="0" Grid.Row="4">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img5.jpg</On>
+                            <On Platform="Windows">images/img5.jpg</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img6.jpg" Grid.Column="1" Grid.Row="0">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="1" Grid.Row="0">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img6.jpg</On>
+                            <On Platform="Windows">images/img6.jpg</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img7.jpg" Grid.Column="1" Grid.Row="1">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="1" Grid.Row="1">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img7.jpg</On>
+                            <On Platform="Windows">images/img7.jpg</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img8.png" Grid.Column="1" Grid.Row="2">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="1" Grid.Row="2">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img8.png</On>
+                            <On Platform="Windows">images/img8.png</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img9.png" Grid.Column="1" Grid.Row="3">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="1" Grid.Row="3">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img9.png</On>
+                            <On Platform="Windows">images/img9.png</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
-                    <Image Source="img10.jpg" Grid.Column="1" Grid.Row="4">
-                        <Image.GestureRecognizers>
+                    <Image Grid.Column="1" Grid.Row="4">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android">img10.jpg</On>
+                            <On Platform="Windows">images/img10.jpg</On>
+                        </OnPlatform>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>

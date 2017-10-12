@@ -14,7 +14,13 @@
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Image Source="Home.png" Grid.Row="0" HorizontalOptions="EndAndExpand" Aspect="AspectFill">
+            <Image Grid.Row="0" HorizontalOptions="EndAndExpand" Aspect="AspectFill">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="Android">Home.png</On>
+                        <On Platform="Windows">images/Home.png</On>
+                    </OnPlatform>
+                </Image.Source>
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                 </Image.GestureRecognizers>
